@@ -5,38 +5,18 @@ using System.Data.SqlClient;
 
 namespace Borrowing_System
 {
-    /// <summary>
-    /// Centralised MySQL helper.
-    /// Add the MySql.Data NuGet package (8.x) to your project.
-    /// Connection string is read from App.config – see example below.
-    /// </summary>
     public static class DBHelper
     {
-        // ── Connection string ──────────────────────────────────────────────
-        // In App.config add inside <configuration>:
-        //
-        //   <connectionStrings>
-        //     <add name="LendABook"
-        //          connectionString="server=localhost;port=3306;database=lendabook;
-        //                            uid=root;pwd=YourPassword;charset=utf8mb4;"
-        //          providerName="MySql.Data.MySqlClient" />
-        //   </connectionStrings>
-        //
-        // Then replace the literal below with:
-        //   System.Configuration.ConfigurationManager
-        //       .ConnectionStrings["LendABook"].ConnectionString
-        // ──────────────────────────────────────────────────────────────────
         private static readonly string connectionString =
              "Server=equipment-borrowing-and-return-system-jonhcarl43-a598.l.aivencloud.com;" +
              "Port=28924;" +
-             "Database=lendabook;" +    // ← changed from "defaultdb"
+             "Database=lendabook;" +    
              "Uid=avnadmin;" +
              "Pwd=AVNS_1lcS9H2GAdRsmTBiB2Y;" +
              "SslMode=Required;" +
              "SslCa=ca.pem;" +
              "ConnectionTimeout=30;";
 
-        // ── Low-level helpers ──────────────────────────────────────────────
 
         public static MySqlConnection GetConnection()
         {
@@ -44,8 +24,6 @@ namespace Borrowing_System
             conn.Open();
             return conn;
         }
-
-        /// <summary>Returns a filled DataTable from a SELECT query.</summary>
         public static DataTable ExecuteQuery(string sql, params MySqlParameter[] prms)
         {
             using (var conn = GetConnection())
@@ -58,8 +36,6 @@ namespace Borrowing_System
                 return dt;
             }
         }
-
-        /// <summary>Runs INSERT / UPDATE / DELETE; returns rows affected.</summary>
         public static int ExecuteNonQuery(string sql, params MySqlParameter[] prms)
         {
             using (var conn = GetConnection())
@@ -69,8 +45,6 @@ namespace Borrowing_System
                 return cmd.ExecuteNonQuery();
             }
         }
-
-        /// <summary>Returns the first column of the first row.</summary>
         public static object ExecuteScalar(string sql, params MySqlParameter[] prms)
         {
             using (var conn = GetConnection())
@@ -80,8 +54,6 @@ namespace Borrowing_System
                 return cmd.ExecuteScalar();
             }
         }
-
-        /// <summary>Calls a stored procedure and returns a filled DataTable.</summary>
         public static DataTable ExecuteStoredProcedure(string procedureName,
                                                         params MySqlParameter[] prms)
         {
@@ -96,8 +68,6 @@ namespace Borrowing_System
                 return dt;
             }
         }
-
-        /// <summary>Calls a void stored procedure (no result set).</summary>
         public static void ExecuteStoredProcedureNonQuery(string procedureName,
                                                           params MySqlParameter[] prms)
         {
@@ -109,14 +79,9 @@ namespace Borrowing_System
                 cmd.ExecuteNonQuery();
             }
         }
-
-        // ── BOOK CRUD ──────────────────────────────────────────────────────
-
-        /// <summary>All books (for the combobox / list).</summary>
         public static DataTable GetAllBooks()
             => ExecuteQuery("SELECT book_id, title, author, available FROM books ORDER BY title;");
 
-        /// <summary>Books that still have copies available.</summary>
         public static DataTable GetAvailableBooks()
             => ExecuteQuery(
                "SELECT book_id, title, author FROM books WHERE available > 0 ORDER BY title;");
@@ -143,9 +108,6 @@ namespace Borrowing_System
             => ExecuteNonQuery(
                "DELETE FROM books WHERE book_id=@id;",
                new MySqlParameter("@id", bookId));
-
-        // ── BORROWER CRUD ──────────────────────────────────────────────────
-
         public static DataTable GetAllBorrowers()
             => ExecuteQuery(
                "SELECT borrower_id, school_id, full_name, program, contact_no " +
@@ -178,26 +140,17 @@ namespace Borrowing_System
             => ExecuteNonQuery(
                "DELETE FROM borrowers WHERE borrower_id=@id;",
                new MySqlParameter("@id", borrowerId));
-
-        // ── BORROW RECORDS CRUD ────────────────────────────────────────────
-
-        /// <summary>All borrow records joined with borrower and book info.</summary>
         public static DataTable GetAllBorrowRecords()
             => ExecuteQuery("SELECT * FROM v_borrow_details;");
 
-        /// <summary>Only active (borrowed/overdue) records.</summary>
         public static DataTable GetActiveBorrowRecords()
             => ExecuteQuery(
                "SELECT * FROM v_borrow_details WHERE status IN ('borrowed','overdue');");
-
-        /// <summary>Search by school_id, name or book title.</summary>
         public static DataTable SearchBorrowRecords(string keyword)
             => ExecuteQuery(
                "SELECT * FROM v_borrow_details " +
                "WHERE school_id LIKE @kw OR full_name LIKE @kw OR book_title LIKE @kw;",
                new MySqlParameter("@kw", $"%{keyword}%"));
-
-        /// <summary>Add a new borrow record via stored procedure.</summary>
         public static void BorrowBook(string schoolId, string fullName, string program,
                                        string contactNo, string bookTitle,
                                        DateTime dateBorrowed, DateTime dueDate,
@@ -211,14 +164,10 @@ namespace Borrowing_System
                new MySqlParameter("p_date_borrowed", dateBorrowed.ToString("yyyy-MM-dd")),
                new MySqlParameter("p_due_date", dueDate.ToString("yyyy-MM-dd")),
                new MySqlParameter("p_amount_paid", amountPaid));
-
-        /// <summary>Mark a record as returned via stored procedure.</summary>
         public static void ReturnBook(int recordId, decimal amountPaid)
             => ExecuteStoredProcedureNonQuery("sp_return_book",
                new MySqlParameter("p_record_id", recordId),
                new MySqlParameter("p_amount_paid", amountPaid));
-
-        /// <summary>Modify an existing record via stored procedure.</summary>
         public static void ModifyRecord(int recordId, string schoolId, string fullName,
                                          string program, string contactNo, string bookTitle,
                                          DateTime dateBorrowed, decimal amountPaid)
@@ -231,25 +180,14 @@ namespace Borrowing_System
                new MySqlParameter("p_book_title", bookTitle),
                new MySqlParameter("p_date_borrowed", dateBorrowed.ToString("yyyy-MM-dd")),
                new MySqlParameter("p_amount_paid", amountPaid));
-
-        /// <summary>Delete a borrow record (restores stock if not yet returned).</summary>
         public static void DeleteRecord(int recordId)
             => ExecuteStoredProcedureNonQuery("sp_delete_record",
                new MySqlParameter("p_record_id", recordId));
-
-        // ── DASHBOARD STATS ────────────────────────────────────────────────
-
-        /// <summary>
-        /// Returns a single DataRow with:
-        ///   available_books, borrowed_books, overdue_books, active_loans
-        /// </summary>
         public static DataRow GetDashboardStats()
         {
             var dt = ExecuteStoredProcedure("sp_get_dashboard_stats");
             return dt.Rows.Count > 0 ? dt.Rows[0] : null;
         }
-
-        /// <summary>Update overdue flags – call once on app start.</summary>
         public static void RefreshOverdueStatus()
             => ExecuteStoredProcedureNonQuery("sp_refresh_overdue");
     }

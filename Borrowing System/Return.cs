@@ -40,9 +40,6 @@ namespace Borrowing_System
         {
             try
             {
-                // v_borrow_details columns:
-                // record_id, school_id, full_name, program, contact_no, book_title,
-                // date_borrowed, due_date, date_returned, amount_paid, status
                 DataTable dt = DBHelper.GetActiveBorrowRecords();
 
                 dataGridView1.Rows.Clear();
@@ -117,7 +114,6 @@ namespace Borrowing_System
 
             try
             {
-                // Preserve whatever amount_paid is currently on the record.
                 DataTable current = DBHelper.ExecuteQuery(
                     "SELECT amount_paid FROM borrow_records WHERE record_id = @rid;",
                     new MySql.Data.MySqlClient.MySqlParameter("@rid", _selectedRecordId));

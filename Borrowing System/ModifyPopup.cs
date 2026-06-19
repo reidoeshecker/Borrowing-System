@@ -12,10 +12,6 @@ namespace Borrowing_System
             int nLeft, int nTop, int nRight, int nBottom, int nWidth, int nHeight);
 
         private readonly int _recordId;
-
-        // ── Constructor ────────────────────────────────────────────────────
-
-        /// <summary>Pass the borrow record_id to prefill the form.</summary>
         public ModifyPopup(int recordId)
         {
             InitializeComponent();
@@ -26,8 +22,6 @@ namespace Borrowing_System
             this.Region = System.Drawing.Region.FromHrgn(
                 CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
         }
-
-        // ── Load ───────────────────────────────────────────────────────────
 
         private void ModifyPopup_Load(object sender, EventArgs e)
         {
@@ -95,9 +89,6 @@ namespace Borrowing_System
                                 "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        // ── Wire Save ─────────────────────────────────────────────────────
-
         private void WireSaveButton()
         {
             // customButton2 is the "Save Changes" button
@@ -105,7 +96,6 @@ namespace Borrowing_System
             customButton2.Click += OnSaveChanges;
         }
 
-        // ── UPDATE (Save Changes) ──────────────────────────────────────────
 
         private void OnSaveChanges(object sender, EventArgs e)
         {
@@ -145,9 +135,6 @@ namespace Borrowing_System
                                 "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        // ── Cancel ────────────────────────────────────────────────────────
-
         private void customButton1_Click_1(object sender, EventArgs e)
             => this.Close();
 

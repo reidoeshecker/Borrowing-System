@@ -13,15 +13,11 @@ namespace Borrowing_System
 
         private void Dashboard_Load(object sender, EventArgs e)
         {
-            // 1. Refresh overdue status first
             try { DBHelper.RefreshOverdueStatus(); } catch { /* ignore on startup */ }
 
-            // 2. Load counters and book list
             LoadDashboardStats();
             LoadAvailableBookList();
         }
-
-        // ── Stats ──────────────────────────────────────────────────────────
 
         private void LoadDashboardStats()
         {
@@ -41,9 +37,6 @@ namespace Borrowing_System
                                 "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        // ── Book List ──────────────────────────────────────────────────────
-
         private void LoadAvailableBookList()
         {
             try
@@ -64,8 +57,6 @@ namespace Borrowing_System
                                 "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        // ── Navigation buttons ─────────────────────────────────────────────
 
         private void cyberButton2_Click(object sender, EventArgs e)
         {

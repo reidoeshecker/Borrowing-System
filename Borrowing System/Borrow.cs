@@ -9,7 +9,6 @@ namespace Borrowing_System
     {
         private ModifyPopup _mdPopup;
 
-        // Track which record is selected in the grid
         private int _selectedRecordId = -1;
 
         public Borrow()
@@ -23,12 +22,8 @@ namespace Borrowing_System
             LoadBorrowRecords();
             WireConfirmButton();
 
-            // Set default borrow date to today
             poisonDateTime1.Value = DateTime.Today;
         }
-
-        // ── Populate controls ──────────────────────────────────────────────
-
         private void LoadBooks()
         {
             try
@@ -80,30 +75,19 @@ namespace Borrowing_System
                     row["due_date"]      is DBNull ? "" : Convert.ToDateTime(row["due_date"]).ToString("MM/dd/yyyy"),
                     row["amount_paid"]
                 );
-
-                // Colour overdue rows red
                 string status = row["status"].ToString();
                 if (status == "overdue")
                     dataGridView1.Rows[rowNum - 2].DefaultCellStyle.ForeColor = Color.Red;
                 else if (status == "returned")
                     dataGridView1.Rows[rowNum - 2].DefaultCellStyle.ForeColor = Color.Gray;
-
-                // Store record_id in the row Tag
                 dataGridView1.Rows[rowNum - 2].Tag = row["record_id"];
             }
         }
-
-        // ── Wire the Confirm button (defined in designer as customButton1) ─
-
         private void WireConfirmButton()
         {
-            // The designer already has customButton1; attach click here if not done there
-            customButton1.Click -= customButton1_Click;   // prevent double-wiring
+            customButton1.Click -= customButton1_Click;   
             customButton1.Click += customButton1_Click;
         }
-
-        // ── CREATE ─────────────────────────────────────────────────────────
-
         private void customButton1_Click(object sender, EventArgs e)
         {
             // Validate
@@ -125,7 +109,7 @@ namespace Borrowing_System
             try
             {
                 DateTime dateBorrowed = poisonDateTime1.Value.Date;
-                DateTime dueDate      = dateBorrowed.AddDays(7);   // default 7-day loan
+                DateTime dueDate      = dateBorrowed.AddDays(7);  
                 decimal  amtPaid      = 0;
 
                 if (!string.IsNullOrWhiteSpace(smallTextBox3.Text))
@@ -154,10 +138,6 @@ namespace Borrowing_System
                                 "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        // ── READ / SEARCH ──────────────────────────────────────────────────
-
-        // Call this when user types in a search box (wire from designer or here)
         public void SearchRecords(string keyword)
         {
             try
@@ -173,9 +153,6 @@ namespace Borrowing_System
                                 "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        // ── UPDATE (via ModifyPopup) ───────────────────────────────────────
-
         private void customButton2_Click(object sender, EventArgs e)
         {
             if (_selectedRecordId < 0)
@@ -191,7 +168,7 @@ namespace Borrowing_System
                 {
                     _mdPopup = null;
                     LoadBooks();
-                    LoadBorrowRecords();   // refresh after edit
+                    LoadBorrowRecords();  
                 };
                 _mdPopup.Show(this);
             }
@@ -201,9 +178,6 @@ namespace Borrowing_System
                 _mdPopup.Focus();
             }
         }
-
-        // ── DELETE ─────────────────────────────────────────────────────────
-
         public void DeleteSelectedRecord()
         {
             if (_selectedRecordId < 0)
@@ -236,8 +210,6 @@ namespace Borrowing_System
             }
         }
 
-        // ── Grid row selection ─────────────────────────────────────────────
-
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex < 0) return;
@@ -245,9 +217,6 @@ namespace Borrowing_System
             if (row.Tag != null)
                 _selectedRecordId = Convert.ToInt32(row.Tag);
         }
-
-        // ── Helpers ───────────────────────────────────────────────────────
-
         private void ClearForm()
         {
             smallTextBox1.Text  = "";
