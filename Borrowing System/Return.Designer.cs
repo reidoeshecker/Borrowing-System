@@ -232,6 +232,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Return";
             this.Text = "Return";
+            this.Load += new System.EventHandler(this.Return_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.roundedPanel1.ResumeLayout(false);
             this.ResumeLayout(false);

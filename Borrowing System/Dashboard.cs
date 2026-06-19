@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Borrowing_System
@@ -17,14 +11,74 @@ namespace Borrowing_System
             InitializeComponent();
         }
 
+        private void Dashboard_Load(object sender, EventArgs e)
+        {
+            // 1. Refresh overdue status first
+            try { DBHelper.RefreshOverdueStatus(); } catch { /* ignore on startup */ }
+
+            // 2. Load counters and book list
+            LoadDashboardStats();
+            LoadAvailableBookList();
+        }
+
+        // ── Stats ──────────────────────────────────────────────────────────
+
+        private void LoadDashboardStats()
+        {
+            try
+            {
+                DataRow row = DBHelper.GetDashboardStats();
+                if (row == null) return;
+
+                label5.Text = row["available_books"].ToString();   // Available Books
+                label9.Text = row["borrowed_books"].ToString();    // Borrowed Books
+                label7.Text = row["active_loans"].ToString();      // Active Loans
+                label4.Text = row["overdue_books"].ToString();     // Overdue
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Failed to load dashboard stats:\n" + ex.Message,
+                                "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        // ── Book List ──────────────────────────────────────────────────────
+
+        private void LoadAvailableBookList()
+        {
+            try
+            {
+                DataTable dt = DBHelper.GetAllBooks();
+                listBox1.Items.Clear();
+
+                foreach (DataRow row in dt.Rows)
+                {
+                    string avail = row["available"].ToString();
+                    string entry = $"{row["title"]}  [{avail} copy/copies]";
+                    listBox1.Items.Add(entry);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Failed to load book list:\n" + ex.Message,
+                                "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        // ── Navigation buttons ─────────────────────────────────────────────
 
         private void cyberButton2_Click(object sender, EventArgs e)
         {
+            // Borrow button on the Dashboard
             var main = this.FindForm() as Form1;
-            if (main != null)
-            {
-                main.loadForm(new Borrow());
-            }
+            main?.loadForm(new Borrow());
+        }
+
+        private void cyberButton1_Click(object sender, EventArgs e)
+        {
+            // Return button on the Dashboard
+            var main = this.FindForm() as Form1;
+            main?.loadForm(new Return());
         }
     }
 }
