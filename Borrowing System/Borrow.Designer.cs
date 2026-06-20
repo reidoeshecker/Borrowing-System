@@ -67,30 +67,33 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("VAG Rounded Next", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(127)))), ((int)(((byte)(51)))));
-            this.label10.Location = new System.Drawing.Point(16, 12);
+            this.label10.Location = new System.Drawing.Point(21, 15);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(104, 37);
+            this.label10.Size = new System.Drawing.Size(131, 39);
             this.label10.TabIndex = 16;
             this.label10.Text = "Borrow";
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.ForestGreen;
-            this.panel1.Location = new System.Drawing.Point(123, 31);
+            this.panel1.Location = new System.Drawing.Point(164, 38);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(686, 1);
+            this.panel1.Size = new System.Drawing.Size(915, 1);
             this.panel1.TabIndex = 17;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("VAG Rounded Next", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.label1.Location = new System.Drawing.Point(27, 47);
+            this.label1.Location = new System.Drawing.Point(36, 58);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(220, 29);
+            this.label1.Size = new System.Drawing.Size(287, 31);
             this.label1.TabIndex = 19;
             this.label1.Text = "Borrower Information";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -119,10 +122,11 @@
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.Location = new System.Drawing.Point(16, 194);
+            this.dataGridView1.Location = new System.Drawing.Point(21, 239);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(796, 269);
+            this.dataGridView1.Size = new System.Drawing.Size(1061, 331);
             this.dataGridView1.TabIndex = 20;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -133,7 +137,7 @@
             this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
-            this.Column1.Width = 39;
+            this.Column1.Width = 43;
             // 
             // Column2
             // 
@@ -142,7 +146,7 @@
             this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
-            this.Column2.Width = 112;
+            this.Column2.Width = 132;
             // 
             // Column3
             // 
@@ -151,7 +155,7 @@
             this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
-            this.Column3.Width = 73;
+            this.Column3.Width = 90;
             // 
             // Column8
             // 
@@ -174,7 +178,7 @@
             this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
-            this.Column4.Width = 74;
+            this.Column4.Width = 90;
             // 
             // Column5
             // 
@@ -183,7 +187,7 @@
             this.Column5.MinimumWidth = 6;
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
-            this.Column5.Width = 97;
+            this.Column5.Width = 119;
             // 
             // Column6
             // 
@@ -192,7 +196,7 @@
             this.Column6.MinimumWidth = 6;
             this.Column6.Name = "Column6";
             this.Column6.ReadOnly = true;
-            this.Column6.Width = 72;
+            this.Column6.Width = 86;
             // 
             // Column7
             // 
@@ -201,7 +205,7 @@
             this.Column7.MinimumWidth = 6;
             this.Column7.Name = "Column7";
             this.Column7.ReadOnly = true;
-            this.Column7.Width = 85;
+            this.Column7.Width = 103;
             // 
             // customButton2
             // 
@@ -216,10 +220,11 @@
             this.customButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.customButton2.IndicatorColor = System.Drawing.Color.ForestGreen;
             this.customButton2.IsActive = false;
-            this.customButton2.Location = new System.Drawing.Point(722, 470);
+            this.customButton2.Location = new System.Drawing.Point(963, 578);
+            this.customButton2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.customButton2.Name = "customButton2";
-            this.customButton2.Padding = new System.Windows.Forms.Padding(10, 0, 5, 0);
-            this.customButton2.Size = new System.Drawing.Size(90, 34);
+            this.customButton2.Padding = new System.Windows.Forms.Padding(13, 0, 7, 0);
+            this.customButton2.Size = new System.Drawing.Size(120, 42);
             this.customButton2.TabIndex = 1;
             this.customButton2.Text = "Modify";
             this.customButton2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -245,9 +250,10 @@
             this.roundedPanel1.Controls.Add(this.label2);
             this.roundedPanel1.Controls.Add(this.aloneComboBox1);
             this.roundedPanel1.ForeColor = System.Drawing.Color.White;
-            this.roundedPanel1.Location = new System.Drawing.Point(16, 65);
+            this.roundedPanel1.Location = new System.Drawing.Point(21, 80);
+            this.roundedPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.roundedPanel1.Name = "roundedPanel1";
-            this.roundedPanel1.Size = new System.Drawing.Size(796, 121);
+            this.roundedPanel1.Size = new System.Drawing.Size(1061, 149);
             this.roundedPanel1.TabIndex = 18;
             this.roundedPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.roundedPanel1_Paint);
             // 
@@ -257,9 +263,10 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.label8.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label8.Location = new System.Drawing.Point(572, 14);
+            this.label8.Location = new System.Drawing.Point(763, 17);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(77, 15);
+            this.label8.Size = new System.Drawing.Size(98, 20);
             this.label8.TabIndex = 35;
             this.label8.Text = "Amount Paid";
             // 
@@ -270,12 +277,13 @@
             this.smallTextBox3.CustomBGColor = System.Drawing.Color.White;
             this.smallTextBox3.Font = new System.Drawing.Font("Tahoma", 9.25F);
             this.smallTextBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.smallTextBox3.Location = new System.Drawing.Point(575, 32);
+            this.smallTextBox3.Location = new System.Drawing.Point(767, 39);
+            this.smallTextBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.smallTextBox3.MaxLength = 32767;
             this.smallTextBox3.Multiline = false;
             this.smallTextBox3.Name = "smallTextBox3";
             this.smallTextBox3.ReadOnly = false;
-            this.smallTextBox3.Size = new System.Drawing.Size(130, 25);
+            this.smallTextBox3.Size = new System.Drawing.Size(173, 29);
             this.smallTextBox3.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
             this.smallTextBox3.TabIndex = 34;
             this.smallTextBox3.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
@@ -284,20 +292,22 @@
             // maskedTextBox2
             // 
             this.maskedTextBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.maskedTextBox2.Location = new System.Drawing.Point(16, 84);
+            this.maskedTextBox2.Location = new System.Drawing.Point(21, 103);
+            this.maskedTextBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.maskedTextBox2.Mask = "0000-00000-AA-0";
             this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(126, 20);
+            this.maskedTextBox2.Size = new System.Drawing.Size(167, 22);
             this.maskedTextBox2.TabIndex = 33;
             this.maskedTextBox2.ValidatingType = typeof(int);
             // 
             // maskedTextBox1
             // 
             this.maskedTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.maskedTextBox1.Location = new System.Drawing.Point(440, 33);
+            this.maskedTextBox1.Location = new System.Drawing.Point(587, 41);
+            this.maskedTextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.maskedTextBox1.Mask = "0000-000-0000";
             this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(126, 20);
+            this.maskedTextBox1.Size = new System.Drawing.Size(167, 22);
             this.maskedTextBox1.TabIndex = 32;
             // 
             // label7
@@ -306,9 +316,10 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label7.Location = new System.Drawing.Point(437, 15);
+            this.label7.Location = new System.Drawing.Point(583, 18);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(70, 15);
+            this.label7.Size = new System.Drawing.Size(90, 20);
             this.label7.TabIndex = 31;
             this.label7.Text = "Contact No.";
             // 
@@ -318,9 +329,10 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label6.Location = new System.Drawing.Point(152, 66);
+            this.label6.Location = new System.Drawing.Point(203, 81);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(89, 15);
+            this.label6.Size = new System.Drawing.Size(116, 20);
             this.label6.TabIndex = 30;
             this.label6.Text = "Date Borrowed ";
             // 
@@ -337,10 +349,11 @@
             this.customButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.customButton1.IndicatorColor = System.Drawing.Color.ForestGreen;
             this.customButton1.IsActive = false;
-            this.customButton1.Location = new System.Drawing.Point(697, 77);
+            this.customButton1.Location = new System.Drawing.Point(929, 95);
+            this.customButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.customButton1.Name = "customButton1";
-            this.customButton1.Padding = new System.Windows.Forms.Padding(10, 0, 5, 0);
-            this.customButton1.Size = new System.Drawing.Size(91, 34);
+            this.customButton1.Padding = new System.Windows.Forms.Padding(13, 0, 7, 0);
+            this.customButton1.Size = new System.Drawing.Size(121, 42);
             this.customButton1.TabIndex = 0;
             this.customButton1.Text = "Confirm";
             this.customButton1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -351,10 +364,11 @@
             this.poisonDateTime1.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.poisonDateTime1.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.poisonDateTime1.FontSize = ReaLTaiizor.Extension.Poison.PoisonDateTimeSize.Medium;
-            this.poisonDateTime1.Location = new System.Drawing.Point(155, 82);
-            this.poisonDateTime1.MinimumSize = new System.Drawing.Size(0, 29);
+            this.poisonDateTime1.Location = new System.Drawing.Point(207, 101);
+            this.poisonDateTime1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.poisonDateTime1.MinimumSize = new System.Drawing.Size(0, 30);
             this.poisonDateTime1.Name = "poisonDateTime1";
-            this.poisonDateTime1.Size = new System.Drawing.Size(200, 29);
+            this.poisonDateTime1.Size = new System.Drawing.Size(265, 30);
             this.poisonDateTime1.TabIndex = 29;
             // 
             // label5
@@ -363,9 +377,10 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label5.Location = new System.Drawing.Point(13, 66);
+            this.label5.Location = new System.Drawing.Point(17, 81);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(108, 15);
+            this.label5.Size = new System.Drawing.Size(135, 20);
             this.label5.TabIndex = 28;
             this.label5.Text = "Student/Faculty ID";
             // 
@@ -375,9 +390,10 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label4.Location = new System.Drawing.Point(152, 15);
+            this.label4.Location = new System.Drawing.Point(203, 18);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(98, 15);
+            this.label4.Size = new System.Drawing.Size(125, 20);
             this.label4.TabIndex = 26;
             this.label4.Text = "Program/Section";
             // 
@@ -388,12 +404,13 @@
             this.smallTextBox2.CustomBGColor = System.Drawing.Color.White;
             this.smallTextBox2.Font = new System.Drawing.Font("Tahoma", 9.25F);
             this.smallTextBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.smallTextBox2.Location = new System.Drawing.Point(155, 32);
+            this.smallTextBox2.Location = new System.Drawing.Point(207, 39);
+            this.smallTextBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.smallTextBox2.MaxLength = 32767;
             this.smallTextBox2.Multiline = false;
             this.smallTextBox2.Name = "smallTextBox2";
             this.smallTextBox2.ReadOnly = false;
-            this.smallTextBox2.Size = new System.Drawing.Size(130, 25);
+            this.smallTextBox2.Size = new System.Drawing.Size(173, 29);
             this.smallTextBox2.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
             this.smallTextBox2.TabIndex = 25;
             this.smallTextBox2.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
@@ -405,9 +422,10 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label3.Location = new System.Drawing.Point(13, 15);
+            this.label3.Location = new System.Drawing.Point(17, 18);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(61, 15);
+            this.label3.Size = new System.Drawing.Size(79, 20);
             this.label3.TabIndex = 24;
             this.label3.Text = "Full Name";
             // 
@@ -418,12 +436,13 @@
             this.smallTextBox1.CustomBGColor = System.Drawing.Color.White;
             this.smallTextBox1.Font = new System.Drawing.Font("Tahoma", 9.25F);
             this.smallTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.smallTextBox1.Location = new System.Drawing.Point(16, 32);
+            this.smallTextBox1.Location = new System.Drawing.Point(21, 39);
+            this.smallTextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.smallTextBox1.MaxLength = 32767;
             this.smallTextBox1.Multiline = false;
             this.smallTextBox1.Name = "smallTextBox1";
             this.smallTextBox1.ReadOnly = false;
-            this.smallTextBox1.Size = new System.Drawing.Size(130, 25);
+            this.smallTextBox1.Size = new System.Drawing.Size(173, 29);
             this.smallTextBox1.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
             this.smallTextBox1.TabIndex = 23;
             this.smallTextBox1.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
@@ -435,9 +454,10 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label2.Location = new System.Drawing.Point(291, 16);
+            this.label2.Location = new System.Drawing.Point(388, 20);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 15);
+            this.label2.Size = new System.Drawing.Size(77, 20);
             this.label2.TabIndex = 22;
             this.label2.Text = "Book Title";
             // 
@@ -449,17 +469,18 @@
             this.aloneComboBox1.EnabledCalc = true;
             this.aloneComboBox1.FormattingEnabled = true;
             this.aloneComboBox1.ItemHeight = 20;
-            this.aloneComboBox1.Location = new System.Drawing.Point(294, 32);
+            this.aloneComboBox1.Location = new System.Drawing.Point(392, 39);
+            this.aloneComboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.aloneComboBox1.Name = "aloneComboBox1";
-            this.aloneComboBox1.Size = new System.Drawing.Size(135, 26);
+            this.aloneComboBox1.Size = new System.Drawing.Size(179, 26);
             this.aloneComboBox1.TabIndex = 21;
             // 
             // Borrow
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(828, 523);
+            this.ClientSize = new System.Drawing.Size(1104, 644);
             this.Controls.Add(this.customButton2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
@@ -467,6 +488,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label10);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Borrow";
             this.Text = "Borrow";
             this.Load += new System.EventHandler(this.Borrow_Load);
