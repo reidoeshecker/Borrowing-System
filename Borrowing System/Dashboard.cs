@@ -37,6 +37,7 @@ namespace Borrowing_System
                                 "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
         private void LoadAvailableBookList()
         {
             try
@@ -58,18 +59,27 @@ namespace Borrowing_System
             }
         }
 
+        private Form1 GetMainForm()
+        {
+            Control c = this.Parent;
+            while (c != null)
+            {
+                if (c is Form1 f) return f;
+                c = c.Parent;
+            }
+            foreach (Form frm in Application.OpenForms)
+                if (frm is Form1 main) return main;
+            return null;
+        }
+
         private void cyberButton2_Click(object sender, EventArgs e)
         {
-            // Borrow button on the Dashboard
-            var main = this.FindForm() as Form1;
-            main?.loadForm(new Borrow());
+            GetMainForm()?.loadForm(new Borrow());
         }
 
         private void cyberButton1_Click(object sender, EventArgs e)
         {
-            // Return button on the Dashboard
-            var main = this.FindForm() as Form1;
-            main?.loadForm(new Return());
+            GetMainForm()?.loadForm(new Return());
         }
     }
 }

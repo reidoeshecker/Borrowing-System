@@ -75,7 +75,7 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(127)))), ((int)(((byte)(51)))));
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(920, 31);
+            this.panel1.Size = new System.Drawing.Size(997, 31);
             this.panel1.TabIndex = 4;
             // 
             // panel2
@@ -221,11 +221,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("VAG Rounded Next", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(127)))), ((int)(((byte)(51)))));
             this.label1.Location = new System.Drawing.Point(44, 57);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(157, 33);
+            this.label1.Size = new System.Drawing.Size(165, 29);
             this.label1.TabIndex = 5;
             this.label1.Text = "Lend-A-Book";
             // 
@@ -241,6 +241,8 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.lostBorderPanel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
