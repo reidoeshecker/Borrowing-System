@@ -61,7 +61,7 @@
             this.nightControlBox1.EnableMaximizeColor = System.Drawing.Color.White;
             this.nightControlBox1.EnableMinimizeButton = true;
             this.nightControlBox1.EnableMinimizeColor = System.Drawing.Color.White;
-            this.nightControlBox1.Location = new System.Drawing.Point(912, 0);
+            this.nightControlBox1.Location = new System.Drawing.Point(1259, 0);
             this.nightControlBox1.MaximizeHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.nightControlBox1.MaximizeHoverForeColor = System.Drawing.Color.White;
             this.nightControlBox1.MinimizeHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -74,23 +74,26 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(127)))), ((int)(((byte)(51)))));
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(997, 31);
+            this.panel1.Size = new System.Drawing.Size(1349, 38);
             this.panel1.TabIndex = 4;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.LightGray;
-            this.panel2.Location = new System.Drawing.Point(0, 544);
+            this.panel2.Location = new System.Drawing.Point(0, 670);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1035, 20);
+            this.panel2.Size = new System.Drawing.Size(1380, 25);
             this.panel2.TabIndex = 5;
             // 
             // panel3
             // 
-            this.panel3.Location = new System.Drawing.Point(207, 29);
+            this.panel3.Location = new System.Drawing.Point(276, 36);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(828, 523);
+            this.panel3.Size = new System.Drawing.Size(1104, 644);
             this.panel3.TabIndex = 14;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
@@ -106,10 +109,11 @@
             this.lostBorderPanel2.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.lostBorderPanel2.ForeColor = System.Drawing.Color.White;
             this.lostBorderPanel2.Location = new System.Drawing.Point(0, 0);
+            this.lostBorderPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.lostBorderPanel2.Name = "lostBorderPanel2";
-            this.lostBorderPanel2.Padding = new System.Windows.Forms.Padding(5);
+            this.lostBorderPanel2.Padding = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.lostBorderPanel2.ShowText = true;
-            this.lostBorderPanel2.Size = new System.Drawing.Size(206, 564);
+            this.lostBorderPanel2.Size = new System.Drawing.Size(275, 694);
             this.lostBorderPanel2.TabIndex = 4;
             // 
             // sidebarButton2
@@ -125,10 +129,11 @@
             this.sidebarButton2.Image = ((System.Drawing.Image)(resources.GetObject("sidebarButton2.Image")));
             this.sidebarButton2.IndicatorColor = System.Drawing.Color.ForestGreen;
             this.sidebarButton2.IsActive = false;
-            this.sidebarButton2.Location = new System.Drawing.Point(-44, 132);
+            this.sidebarButton2.Location = new System.Drawing.Point(-59, 162);
+            this.sidebarButton2.Margin = new System.Windows.Forms.Padding(4);
             this.sidebarButton2.Name = "sidebarButton2";
-            this.sidebarButton2.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.sidebarButton2.Size = new System.Drawing.Size(224, 50);
+            this.sidebarButton2.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.sidebarButton2.Size = new System.Drawing.Size(299, 62);
             this.sidebarButton2.TabIndex = 11;
             this.sidebarButton2.Text = "Dashboard";
             this.sidebarButton2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -148,10 +153,11 @@
             this.sidebarButton1.Image = ((System.Drawing.Image)(resources.GetObject("sidebarButton1.Image")));
             this.sidebarButton1.IndicatorColor = System.Drawing.Color.ForestGreen;
             this.sidebarButton1.IsActive = false;
-            this.sidebarButton1.Location = new System.Drawing.Point(-8, 258);
+            this.sidebarButton1.Location = new System.Drawing.Point(-11, 318);
+            this.sidebarButton1.Margin = new System.Windows.Forms.Padding(4);
             this.sidebarButton1.Name = "sidebarButton1";
-            this.sidebarButton1.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.sidebarButton1.Size = new System.Drawing.Size(188, 50);
+            this.sidebarButton1.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.sidebarButton1.Size = new System.Drawing.Size(251, 62);
             this.sidebarButton1.TabIndex = 10;
             this.sidebarButton1.Text = "Return";
             this.sidebarButton1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -171,10 +177,11 @@
             this.sidebarButton4.Image = ((System.Drawing.Image)(resources.GetObject("sidebarButton4.Image")));
             this.sidebarButton4.IndicatorColor = System.Drawing.Color.ForestGreen;
             this.sidebarButton4.IsActive = false;
-            this.sidebarButton4.Location = new System.Drawing.Point(-8, 192);
+            this.sidebarButton4.Location = new System.Drawing.Point(-11, 236);
+            this.sidebarButton4.Margin = new System.Windows.Forms.Padding(4);
             this.sidebarButton4.Name = "sidebarButton4";
-            this.sidebarButton4.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.sidebarButton4.Size = new System.Drawing.Size(188, 50);
+            this.sidebarButton4.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.sidebarButton4.Size = new System.Drawing.Size(251, 62);
             this.sidebarButton4.TabIndex = 9;
             this.sidebarButton4.Text = "Borrow";
             this.sidebarButton4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -191,10 +198,11 @@
             this.lostBorderPanel3.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.lostBorderPanel3.ForeColor = System.Drawing.Color.White;
             this.lostBorderPanel3.Location = new System.Drawing.Point(0, 0);
+            this.lostBorderPanel3.Margin = new System.Windows.Forms.Padding(4);
             this.lostBorderPanel3.Name = "lostBorderPanel3";
-            this.lostBorderPanel3.Padding = new System.Windows.Forms.Padding(5);
+            this.lostBorderPanel3.Padding = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.lostBorderPanel3.ShowText = true;
-            this.lostBorderPanel3.Size = new System.Drawing.Size(206, 117);
+            this.lostBorderPanel3.Size = new System.Drawing.Size(275, 144);
             this.lostBorderPanel3.TabIndex = 5;
             // 
             // label12
@@ -202,16 +210,18 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold);
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.label12.Location = new System.Drawing.Point(69, 83);
+            this.label12.Location = new System.Drawing.Point(92, 102);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(95, 13);
+            this.label12.Size = new System.Drawing.Size(118, 19);
             this.label12.TabIndex = 7;
             this.label12.Text = "Share Knowledge";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(11, 61);
+            this.pictureBox1.Location = new System.Drawing.Point(15, 75);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(32, 32);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -223,24 +233,26 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(127)))), ((int)(((byte)(51)))));
-            this.label1.Location = new System.Drawing.Point(44, 57);
+            this.label1.Location = new System.Drawing.Point(55, 70);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(165, 29);
+            this.label1.Size = new System.Drawing.Size(203, 36);
             this.label1.TabIndex = 5;
             this.label1.Text = "Lend-A-Book";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1035, 564);
+            this.ClientSize = new System.Drawing.Size(1380, 694);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.nightControlBox1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.lostBorderPanel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form1";
