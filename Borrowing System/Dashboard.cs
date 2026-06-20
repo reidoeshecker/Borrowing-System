@@ -60,16 +60,22 @@ namespace Borrowing_System
 
         private void cyberButton2_Click(object sender, EventArgs e)
         {
-            // Borrow button on the Dashboard
-            var main = this.FindForm() as Form1;
-            main?.loadForm(new Borrow());
+            Form1 main = Application.OpenForms["Form1"] as Form1;
+
+            if (main != null)
+            {
+                main.loadForm(new Borrow());
+            }
         }
 
-        private void cyberButton1_Click(object sender, EventArgs e)
+        private void cyberButton1_Click_1(object sender, EventArgs e)
         {
-            // Return button on the Dashboard
-            var main = this.FindForm() as Form1;
-            main?.loadForm(new Return());
+            Form1 main = Application.OpenForms["Form1"] as Form1;
+
+            if (main != null)
+            {
+                main.loadForm(new Return());
+            }
         }
     }
 }

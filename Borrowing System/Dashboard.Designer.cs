@@ -89,13 +89,12 @@
             this.cyberButton2.Lighting = false;
             this.cyberButton2.LinearGradient_Background = false;
             this.cyberButton2.LinearGradientPen = false;
-            this.cyberButton2.Location = new System.Drawing.Point(60, 450);
-            this.cyberButton2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cyberButton2.Location = new System.Drawing.Point(45, 366);
             this.cyberButton2.Name = "cyberButton2";
             this.cyberButton2.PenWidth = 15;
             this.cyberButton2.Rounding = true;
             this.cyberButton2.RoundingInt = 70;
-            this.cyberButton2.Size = new System.Drawing.Size(327, 123);
+            this.cyberButton2.Size = new System.Drawing.Size(245, 100);
             this.cyberButton2.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             this.cyberButton2.TabIndex = 22;
             this.cyberButton2.Tag = "Cyber";
@@ -131,13 +130,12 @@
             this.cyberButton1.Lighting = false;
             this.cyberButton1.LinearGradient_Background = false;
             this.cyberButton1.LinearGradientPen = false;
-            this.cyberButton1.Location = new System.Drawing.Point(395, 450);
-            this.cyberButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cyberButton1.Location = new System.Drawing.Point(296, 366);
             this.cyberButton1.Name = "cyberButton1";
             this.cyberButton1.PenWidth = 15;
             this.cyberButton1.Rounding = true;
             this.cyberButton1.RoundingInt = 70;
-            this.cyberButton1.Size = new System.Drawing.Size(327, 123);
+            this.cyberButton1.Size = new System.Drawing.Size(245, 100);
             this.cyberButton1.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             this.cyberButton1.TabIndex = 21;
             this.cyberButton1.Tag = "Cyber";
@@ -145,6 +143,7 @@
             this.cyberButton1.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             this.cyberButton1.Timer_Effect_1 = 5;
             this.cyberButton1.Timer_RGB = 300;
+            this.cyberButton1.Click += new System.EventHandler(this.cyberButton1_Click_1);
             // 
             // label11
             // 
@@ -152,10 +151,9 @@
             this.label11.BackColor = System.Drawing.SystemColors.Window;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold);
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.label11.Location = new System.Drawing.Point(231, 27);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Location = new System.Drawing.Point(173, 22);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(299, 39);
+            this.label11.Size = new System.Drawing.Size(241, 31);
             this.label11.TabIndex = 19;
             this.label11.Text = "PUPSMB Library!";
             // 
@@ -164,10 +162,9 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(127)))), ((int)(((byte)(51)))));
-            this.label10.Location = new System.Drawing.Point(17, 26);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Location = new System.Drawing.Point(13, 21);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(206, 39);
+            this.label10.Size = new System.Drawing.Size(166, 31);
             this.label10.TabIndex = 15;
             this.label10.Text = "Welcome to";
             // 
@@ -178,17 +175,15 @@
             this.roundedPanel3.Controls.Add(this.label6);
             this.roundedPanel3.Controls.Add(this.label7);
             this.roundedPanel3.ForeColor = System.Drawing.Color.White;
-            this.roundedPanel3.Location = new System.Drawing.Point(404, 260);
-            this.roundedPanel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.roundedPanel3.Location = new System.Drawing.Point(303, 211);
             this.roundedPanel3.Name = "roundedPanel3";
-            this.roundedPanel3.Size = new System.Drawing.Size(351, 113);
+            this.roundedPanel3.Size = new System.Drawing.Size(263, 92);
             this.roundedPanel3.TabIndex = 18;
             // 
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(296, 16);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox4.Location = new System.Drawing.Point(222, 13);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(24, 24);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -200,10 +195,9 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label6.Location = new System.Drawing.Point(20, 11);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(15, 9);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(106, 23);
+            this.label6.Size = new System.Drawing.Size(84, 17);
             this.label6.TabIndex = 0;
             this.label6.Text = "Active Loans";
             // 
@@ -212,10 +206,9 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 38.24999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(127)))), ((int)(((byte)(51)))));
-            this.label7.Location = new System.Drawing.Point(13, 23);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(10, 19);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(69, 73);
+            this.label7.Size = new System.Drawing.Size(54, 59);
             this.label7.TabIndex = 6;
             this.label7.Text = "4";
             // 
@@ -226,17 +219,15 @@
             this.roundedPanel2.Controls.Add(this.label3);
             this.roundedPanel2.Controls.Add(this.label4);
             this.roundedPanel2.ForeColor = System.Drawing.Color.White;
-            this.roundedPanel2.Location = new System.Drawing.Point(30, 260);
-            this.roundedPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.roundedPanel2.Location = new System.Drawing.Point(22, 211);
             this.roundedPanel2.Name = "roundedPanel2";
-            this.roundedPanel2.Size = new System.Drawing.Size(351, 113);
+            this.roundedPanel2.Size = new System.Drawing.Size(263, 92);
             this.roundedPanel2.TabIndex = 16;
             // 
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(296, 16);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox3.Location = new System.Drawing.Point(222, 13);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(24, 24);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -248,10 +239,9 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label3.Location = new System.Drawing.Point(20, 11);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(15, 9);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(76, 23);
+            this.label3.Size = new System.Drawing.Size(60, 17);
             this.label3.TabIndex = 0;
             this.label3.Text = "Overdue";
             // 
@@ -260,10 +250,9 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 38.24999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(127)))), ((int)(((byte)(51)))));
-            this.label4.Location = new System.Drawing.Point(13, 23);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(10, 19);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(69, 73);
+            this.label4.Size = new System.Drawing.Size(54, 59);
             this.label4.TabIndex = 6;
             this.label4.Text = "1";
             // 
@@ -274,17 +263,15 @@
             this.roundedPanel4.Controls.Add(this.label8);
             this.roundedPanel4.Controls.Add(this.label9);
             this.roundedPanel4.ForeColor = System.Drawing.Color.White;
-            this.roundedPanel4.Location = new System.Drawing.Point(404, 115);
-            this.roundedPanel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.roundedPanel4.Location = new System.Drawing.Point(303, 93);
             this.roundedPanel4.Name = "roundedPanel4";
-            this.roundedPanel4.Size = new System.Drawing.Size(351, 113);
+            this.roundedPanel4.Size = new System.Drawing.Size(263, 92);
             this.roundedPanel4.TabIndex = 17;
             // 
             // pictureBox5
             // 
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(296, 16);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox5.Location = new System.Drawing.Point(222, 13);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(24, 24);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -296,10 +283,9 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label8.Location = new System.Drawing.Point(20, 11);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(15, 9);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(135, 23);
+            this.label8.Size = new System.Drawing.Size(108, 17);
             this.label8.TabIndex = 0;
             this.label8.Text = "Borrowed Books";
             // 
@@ -308,10 +294,9 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 38.24999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(127)))), ((int)(((byte)(51)))));
-            this.label9.Location = new System.Drawing.Point(13, 23);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Location = new System.Drawing.Point(10, 19);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(106, 73);
+            this.label9.Size = new System.Drawing.Size(83, 59);
             this.label9.TabIndex = 6;
             this.label9.Text = "10";
             // 
@@ -322,17 +307,15 @@
             this.roundedPanel1.Controls.Add(this.label2);
             this.roundedPanel1.Controls.Add(this.label5);
             this.roundedPanel1.ForeColor = System.Drawing.Color.White;
-            this.roundedPanel1.Location = new System.Drawing.Point(30, 115);
-            this.roundedPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.roundedPanel1.Location = new System.Drawing.Point(22, 93);
             this.roundedPanel1.Name = "roundedPanel1";
-            this.roundedPanel1.Size = new System.Drawing.Size(351, 113);
+            this.roundedPanel1.Size = new System.Drawing.Size(263, 92);
             this.roundedPanel1.TabIndex = 14;
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(296, 16);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Location = new System.Drawing.Point(222, 13);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(24, 24);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -344,10 +327,9 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label2.Location = new System.Drawing.Point(20, 11);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(15, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(130, 23);
+            this.label2.Size = new System.Drawing.Size(103, 17);
             this.label2.TabIndex = 0;
             this.label2.Text = "Available Books";
             // 
@@ -356,10 +338,9 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 38.24999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(127)))), ((int)(((byte)(51)))));
-            this.label5.Location = new System.Drawing.Point(13, 23);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(10, 19);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(106, 73);
+            this.label5.Size = new System.Drawing.Size(83, 59);
             this.label5.TabIndex = 6;
             this.label5.Text = "30";
             // 
@@ -369,7 +350,7 @@
             this.listBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.listBox1.ForeColor = System.Drawing.Color.ForestGreen;
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 21;
+            this.listBox1.ItemHeight = 17;
             this.listBox1.Items.AddRange(new object[] {
             "To Kill a Mockingbird",
             "1984",
@@ -403,10 +384,9 @@
             "The Architect\'s Dilemma",
             "City of Glass and Bone",
             "The Midnight Equation"});
-            this.listBox1.Location = new System.Drawing.Point(11, 12);
-            this.listBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listBox1.Location = new System.Drawing.Point(8, 10);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(288, 441);
+            this.listBox1.Size = new System.Drawing.Size(216, 357);
             this.listBox1.TabIndex = 23;
             // 
             // label1
@@ -415,10 +395,9 @@
             this.label1.BackColor = System.Drawing.SystemColors.Window;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.label1.Location = new System.Drawing.Point(763, 68);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(572, 55);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(286, 29);
+            this.label1.Size = new System.Drawing.Size(224, 24);
             this.label1.TabIndex = 24;
             this.label1.Text = "Lists of available books";
             // 
@@ -427,18 +406,17 @@
             this.roundedPanel6.BackColor = System.Drawing.Color.White;
             this.roundedPanel6.Controls.Add(this.listBox1);
             this.roundedPanel6.ForeColor = System.Drawing.Color.White;
-            this.roundedPanel6.Location = new System.Drawing.Point(769, 103);
-            this.roundedPanel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.roundedPanel6.Location = new System.Drawing.Point(577, 84);
             this.roundedPanel6.Name = "roundedPanel6";
-            this.roundedPanel6.Size = new System.Drawing.Size(305, 487);
+            this.roundedPanel6.Size = new System.Drawing.Size(229, 396);
             this.roundedPanel6.TabIndex = 25;
             // 
             // Dashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1104, 644);
+            this.ClientSize = new System.Drawing.Size(828, 523);
             this.Controls.Add(this.roundedPanel6);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cyberButton2);
@@ -450,7 +428,6 @@
             this.Controls.Add(this.roundedPanel4);
             this.Controls.Add(this.roundedPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Dashboard";
             this.Text = "Dashboard";
             this.roundedPanel3.ResumeLayout(false);

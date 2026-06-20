@@ -57,16 +57,19 @@ namespace Borrowing_System
         private void sidebarButton2_Click(object sender, EventArgs e)
         {
             loadForm(new Dashboard());
+            
         }
 
         private void sidebarButton4_Click(object sender, EventArgs e)
         {
             loadForm(new Borrow());
+            
         }
 
         private void sidebarButton1_Click(object sender, EventArgs e)
         {
             loadForm(new Return());
+            
         }
     }
 }
