@@ -17,7 +17,6 @@ namespace Borrowing_System
              "SslCa=ca.pem;" +
              "ConnectionTimeout=30;";
 
-
         public static MySqlConnection GetConnection()
         {
             var conn = new MySqlConnection(connectionString);
