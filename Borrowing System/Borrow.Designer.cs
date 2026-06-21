@@ -207,7 +207,7 @@
             this.Column7.ReadOnly = true;
             this.Column7.Width = 103;
             // 
-            // customButton2
+            // customButton2  —  Modify button
             // 
             this.customButton2.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.customButton2.BorderRadius = 15;
@@ -336,7 +336,7 @@
             this.label6.TabIndex = 30;
             this.label6.Text = "Date Borrowed ";
             // 
-            // customButton1
+            // customButton1  —  Confirm/Borrow button
             // 
             this.customButton1.BackColor = System.Drawing.Color.ForestGreen;
             this.customButton1.BorderRadius = 15;
@@ -481,7 +481,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1104, 644);
-            this.Controls.Add(this.customButton2);
+            this.Controls.Add(this.customButton2);   // Modify
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.roundedPanel1);
@@ -497,7 +497,6 @@
             this.roundedPanel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         #endregion

@@ -8,7 +8,6 @@ namespace Borrowing_System
     public partial class Borrow : Form
     {
         private ModifyPopup _mdPopup;
-
         private int _selectedRecordId = -1;
 
         public Borrow()
@@ -21,6 +20,8 @@ namespace Borrowing_System
             LoadBooks();
             LoadBorrowRecords();
             WireConfirmButton();
+
+            dataGridView1.CellClick += dataGridView1_CellClick;
 
             poisonDateTime1.Value = DateTime.Today;
         }
@@ -72,25 +73,27 @@ namespace Borrowing_System
                     row["contact_no"],
                     row["book_title"],
                     row["date_borrowed"] is DBNull ? "" : Convert.ToDateTime(row["date_borrowed"]).ToString("MM/dd/yyyy"),
-                    row["due_date"]      is DBNull ? "" : Convert.ToDateTime(row["due_date"]).ToString("MM/dd/yyyy"),
+                    row["due_date"] is DBNull ? "" : Convert.ToDateTime(row["due_date"]).ToString("MM/dd/yyyy"),
                     row["amount_paid"]
                 );
+
                 string status = row["status"].ToString();
                 if (status == "overdue")
                     dataGridView1.Rows[rowNum - 2].DefaultCellStyle.ForeColor = Color.Red;
                 else if (status == "returned")
                     dataGridView1.Rows[rowNum - 2].DefaultCellStyle.ForeColor = Color.Gray;
+
                 dataGridView1.Rows[rowNum - 2].Tag = row["record_id"];
             }
         }
         private void WireConfirmButton()
         {
-            customButton1.Click -= customButton1_Click;   
+            customButton1.Click -= customButton1_Click;
             customButton1.Click += customButton1_Click;
         }
+
         private void customButton1_Click(object sender, EventArgs e)
         {
-            // Validate
             if (string.IsNullOrWhiteSpace(smallTextBox1.Text))
             { ShowWarn("Please enter the borrower's Full Name."); return; }
 
@@ -109,8 +112,8 @@ namespace Borrowing_System
             try
             {
                 DateTime dateBorrowed = poisonDateTime1.Value.Date;
-                DateTime dueDate      = dateBorrowed.AddDays(7);  
-                decimal  amtPaid      = 0;
+                DateTime dueDate = dateBorrowed.AddDays(7);
+                decimal amtPaid = 0;
 
                 if (!string.IsNullOrWhiteSpace(smallTextBox3.Text))
                     decimal.TryParse(smallTextBox3.Text, out amtPaid);
@@ -168,7 +171,7 @@ namespace Borrowing_System
                 {
                     _mdPopup = null;
                     LoadBooks();
-                    LoadBorrowRecords();  
+                    LoadBorrowRecords();
                 };
                 _mdPopup.Show(this);
             }
@@ -178,36 +181,12 @@ namespace Borrowing_System
                 _mdPopup.Focus();
             }
         }
-        public void DeleteSelectedRecord()
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (_selectedRecordId < 0)
-            {
-                ShowWarn("Please select a record to delete.");
-                return;
-            }
-
-            var confirm = MessageBox.Show(
-                "Are you sure you want to delete this borrow record?",
-                "Confirm Delete",
-                MessageBoxButtons.YesNo,
-                MessageBoxIcon.Warning);
-
-            if (confirm != DialogResult.Yes) return;
-
-            try
-            {
-                DBHelper.DeleteRecord(_selectedRecordId);
-                _selectedRecordId = -1;
-                LoadBooks();
-                LoadBorrowRecords();
-                MessageBox.Show("Record deleted.", "Done",
-                                MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Delete failed:\n" + ex.Message,
-                                "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            if (e.RowIndex < 0) return;
+            var row = dataGridView1.Rows[e.RowIndex];
+            if (row.Tag != null)
+                _selectedRecordId = Convert.ToInt32(row.Tag);
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -219,9 +198,9 @@ namespace Borrowing_System
         }
         private void ClearForm()
         {
-            smallTextBox1.Text  = "";
-            smallTextBox2.Text  = "";
-            smallTextBox3.Text  = "";
+            smallTextBox1.Text = "";
+            smallTextBox2.Text = "";
+            smallTextBox3.Text = "";
             maskedTextBox1.Text = "";
             maskedTextBox2.Text = "";
             poisonDateTime1.Value = DateTime.Today;

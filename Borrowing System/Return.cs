@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Windows.Forms;
 
 namespace Borrowing_System
@@ -35,7 +34,6 @@ namespace Borrowing_System
 
             LoadActiveLoans();
         }
-
         private void LoadActiveLoans()
         {
             try
@@ -66,17 +64,17 @@ namespace Borrowing_System
 
                     if (row["status"].ToString().ToLower() == "overdue")
                     {
-                        gridRow.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(255, 235, 235);
-                        gridRow.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
-                        gridRow.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(255, 200, 200);
-                        gridRow.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
+                        gridRow.DefaultCellStyle.BackColor = Color.FromArgb(255, 235, 235);
+                        gridRow.DefaultCellStyle.ForeColor = Color.Black;
+                        gridRow.DefaultCellStyle.SelectionBackColor = Color.FromArgb(255, 200, 200);
+                        gridRow.DefaultCellStyle.SelectionForeColor = Color.Black;
                     }
                     else
                     {
-                        gridRow.DefaultCellStyle.BackColor = System.Drawing.Color.White;
-                        gridRow.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
-                        gridRow.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(0, 120, 215);
-                        gridRow.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.White;
+                        gridRow.DefaultCellStyle.BackColor = Color.White;
+                        gridRow.DefaultCellStyle.ForeColor = Color.Black;
+                        gridRow.DefaultCellStyle.SelectionBackColor = Color.FromArgb(0, 120, 215);
+                        gridRow.DefaultCellStyle.SelectionForeColor = Color.White;
                     }
                 }
             }
@@ -86,15 +84,11 @@ namespace Borrowing_System
                     "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
         {
             if (dataGridView1.CurrentRow?.Tag != null)
-            {
                 _selectedRecordId = Convert.ToInt32(dataGridView1.CurrentRow.Tag);
-            }
         }
-
         private void customButton1_Click(object sender, EventArgs e)
         {
             if (_selectedRecordId < 0)

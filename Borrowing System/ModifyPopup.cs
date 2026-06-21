@@ -91,7 +91,6 @@ namespace Borrowing_System
         }
         private void WireSaveButton()
         {
-            // customButton2 is the "Save Changes" button
             customButton2.Click -= OnSaveChanges;
             customButton2.Click += OnSaveChanges;
         }
@@ -137,6 +136,30 @@ namespace Borrowing_System
         }
         private void customButton1_Click_1(object sender, EventArgs e)
             => this.Close();
+
+        private void customButton3_Click(object sender, EventArgs e)
+        {
+            var confirm = MessageBox.Show(
+                "Are you sure you want to permanently delete this borrow record?\n\nThis cannot be undone.",
+                "Confirm Delete",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Warning);
+
+            if (confirm != DialogResult.Yes) return;
+
+            try
+            {
+                DBHelper.DeleteRecord(_recordId);
+                MessageBox.Show("Record deleted successfully.", "Deleted",
+                                MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Delete failed:\n" + ex.Message,
+                                "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
 
         private static void ShowWarn(string msg)
             => MessageBox.Show(msg, "Validation", MessageBoxButtons.OK, MessageBoxIcon.Warning);

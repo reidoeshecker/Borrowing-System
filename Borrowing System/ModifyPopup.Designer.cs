@@ -46,6 +46,7 @@
             this.aloneComboBox1 = new ReaLTaiizor.Controls.AloneComboBox();
             this.customButton1 = new Borrowing_System.CustomButton();
             this.customButton2 = new Borrowing_System.CustomButton();
+            this.customButton3 = new Borrowing_System.CustomButton();
             this.roundedPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -68,6 +69,7 @@
             this.roundedPanel1.Controls.Add(this.aloneComboBox1);
             this.roundedPanel1.Controls.Add(this.customButton1);
             this.roundedPanel1.Controls.Add(this.customButton2);
+            this.roundedPanel1.Controls.Add(this.customButton3);
             this.roundedPanel1.ForeColor = System.Drawing.Color.White;
             this.roundedPanel1.Location = new System.Drawing.Point(5, 5);
             this.roundedPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -313,6 +315,28 @@
             this.customButton2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.customButton2.UseVisualStyleBackColor = false;
             // 
+            // customButton3  —  Delete button
+            // 
+            this.customButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.customButton3.BorderRadius = 15;
+            this.customButton3.ButtonBorderSize = 2;
+            this.customButton3.FlatAppearance.BorderSize = 0;
+            this.customButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.customButton3.Font = new System.Drawing.Font("Segoe UI Black", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customButton3.ForeColor = System.Drawing.Color.White;
+            this.customButton3.IndicatorColor = System.Drawing.Color.DarkRed;
+            this.customButton3.IsActive = false;
+            this.customButton3.Location = new System.Drawing.Point(32, 319);
+            this.customButton3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.customButton3.Name = "customButton3";
+            this.customButton3.Padding = new System.Windows.Forms.Padding(10, 0, 5, 0);
+            this.customButton3.Size = new System.Drawing.Size(100, 42);
+            this.customButton3.TabIndex = 4;
+            this.customButton3.Text = "Delete";
+            this.customButton3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.customButton3.UseVisualStyleBackColor = false;
+            this.customButton3.Click += new System.EventHandler(this.customButton3_Click);
+            // 
             // ModifyPopup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -336,6 +360,7 @@
         private RoundedPanel.RoundedPanel roundedPanel1;
         private CustomButton customButton2;
         private CustomButton customButton1;
+        private CustomButton customButton3;
         private System.Windows.Forms.MaskedTextBox maskedTextBox2;
         private System.Windows.Forms.Label label6;
         private ReaLTaiizor.Controls.PoisonDateTime poisonDateTime1;
