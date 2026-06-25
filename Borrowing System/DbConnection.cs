@@ -10,7 +10,7 @@ namespace Borrowing_System
         private static readonly string connectionString =
              "Server=equipment-borrowing-and-return-system-jonhcarl43-a598.l.aivencloud.com;" +
              "Port=28924;" +
-             "Database=lendabook;" +    
+             "Database=lendabook;" +
              "Uid=avnadmin;" +
              "Pwd=AVNS_1lcS9H2GAdRsmTBiB2Y;" +
              "SslMode=Required;" +
@@ -180,8 +180,33 @@ namespace Borrowing_System
                new MySqlParameter("p_date_borrowed", dateBorrowed.ToString("yyyy-MM-dd")),
                new MySqlParameter("p_amount_paid", amountPaid));
         public static void DeleteRecord(int recordId)
-            => ExecuteStoredProcedureNonQuery("sp_delete_record",
-               new MySqlParameter("p_record_id", recordId));
+        {
+            var lookup = ExecuteQuery(
+                "SELECT borrower_id FROM borrow_records WHERE record_id = @rid;",
+                new MySqlParameter("@rid", recordId));
+
+            int borrowerId = -1;
+            if (lookup.Rows.Count > 0 && lookup.Rows[0]["borrower_id"] != DBNull.Value)
+                borrowerId = Convert.ToInt32(lookup.Rows[0]["borrower_id"]);
+
+            ExecuteStoredProcedureNonQuery("sp_delete_record",
+                new MySqlParameter("p_record_id", recordId));
+
+            if (borrowerId > 0)
+            {
+                var remaining = ExecuteQuery(
+                    "SELECT COUNT(*) AS cnt FROM borrow_records WHERE borrower_id = @bid;",
+                    new MySqlParameter("@bid", borrowerId));
+
+                if (remaining.Rows.Count > 0 &&
+                    Convert.ToInt32(remaining.Rows[0]["cnt"]) == 0)
+                {
+                    ExecuteNonQuery(
+                        "DELETE FROM borrowers WHERE borrower_id = @bid;",
+                        new MySqlParameter("@bid", borrowerId));
+                }
+            }
+        }
         public static DataRow GetDashboardStats()
         {
             var dt = ExecuteStoredProcedure("sp_get_dashboard_stats");
