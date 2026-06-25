@@ -50,9 +50,7 @@ namespace Borrowing_System
         {
             try
             {
-                DataTable dt = DBHelper.ExecuteQuery(
-                    "SELECT * FROM v_borrow_details WHERE record_id = @id;",
-                    new MySql.Data.MySqlClient.MySqlParameter("@id", _recordId));
+                DataTable dt = DBHelper.GetBorrowRecordById(_recordId);
 
                 if (dt.Rows.Count == 0)
                 {

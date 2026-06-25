@@ -34,6 +34,7 @@ namespace Borrowing_System
 
             LoadActiveLoans();
         }
+
         private void LoadActiveLoans()
         {
             try
@@ -84,11 +85,13 @@ namespace Borrowing_System
                     "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
         {
             if (dataGridView1.CurrentRow?.Tag != null)
                 _selectedRecordId = Convert.ToInt32(dataGridView1.CurrentRow.Tag);
         }
+
         private void customButton1_Click(object sender, EventArgs e)
         {
             if (_selectedRecordId < 0)
@@ -108,9 +111,7 @@ namespace Borrowing_System
 
             try
             {
-                DataTable current = DBHelper.ExecuteQuery(
-                    "SELECT amount_paid FROM borrow_records WHERE record_id = @rid;",
-                    new MySql.Data.MySqlClient.MySqlParameter("@rid", _selectedRecordId));
+                DataTable current = DBHelper.GetRecordAmountPaid(_selectedRecordId);
 
                 decimal amountPaid = current.Rows.Count > 0 && current.Rows[0]["amount_paid"] != DBNull.Value
                     ? Convert.ToDecimal(current.Rows[0]["amount_paid"])
